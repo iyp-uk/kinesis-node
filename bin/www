@@ -49,6 +49,12 @@ function normalizePort(val) {
   return false;
 }
 
+
+if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
+  console.error('No AWS credentials supplied, terminating')
+  server.close()
+}
+
 /**
  * Event listener for HTTP server "error" event.
  */
