@@ -21,3 +21,17 @@ You **can** also specify:
 ## Other environment variables
 
 - `STREAM_NAME`, defaults to `streamName`
+
+## Docker
+
+```console
+$ docker build -t miaoulafrite/kinesis-node . \
+  && docker run \
+  -p 3000:3000 \
+  --env AWS_ACCESS_KEY_ID=accesKey \
+  --env AWS_SECRET_ACCESS_KEY=secretKey \
+  --env AWS_REGION=eu-west-1 \ 
+  --env STREAM_NAME=yourStream \
+  --name kinesis-node \
+  miaoulafrite/kinesis-node 
+```
