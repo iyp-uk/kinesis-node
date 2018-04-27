@@ -3,7 +3,7 @@ var express = require('express')
 var router = express.Router()
 
 var AWS_REGION = process.env.AWS_REGION || 'eu-west-1'
-var STREAM_NAME = process.env.STREAM_NAME || 'kafka-vs-kinesis'
+var STREAM_NAME = process.env.STREAM_NAME || 'streamName'
 
 var AWS = require('aws-sdk')
 var kinesis = new AWS.Kinesis({region: AWS_REGION})

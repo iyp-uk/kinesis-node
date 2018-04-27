@@ -11,9 +11,13 @@ There is also a basic ping / pong healthcheck available at `/ping` and it replie
 
 You **must** specify the following environment variables:
 
-- AWS_ACCESS_KEY_ID
-- AWS_SECRET_ACCESS_KEY
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
 
 You **can** also specify:
 
 - `AWS_REGION`, will default to `eu-west-1`
+
+## Other environment variables
+
+- `STREAM_NAME`, defaults to `streamName`
